@@ -11,7 +11,7 @@ const orm = {
     });
   },
 
-    insertOne: function(burgName, , callback) {
+    insertOne: function(burgName, callback) {
         const queryText = `INSERT INTO ${tableName} (burger_name, devoured)
         VALUES (??, FALSE);`;
 
