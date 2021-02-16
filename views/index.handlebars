@@ -1,8 +1,16 @@
-<p>Burger World!</p>
+<p>Burger Eater!</p>
 
 
 <p>Burgers waiting to be devoured:</p>
     {{#each burger}}
-        <ul>{{this.burger_name}}</ul>
+        {{#unless devoured}}
+            <ul>{{this.burger_name}}</ul>
+        {{/unless}}
     {{/each}}
 
+<p>Devoured Burgers</p>
+    {{#each burger}}
+        {{#if devoured}}
+            <ul>{{this.burger_name}}</ul>
+        {{/if}}
+    {{/each}}

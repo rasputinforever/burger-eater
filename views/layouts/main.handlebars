@@ -4,10 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width={{{device-width}}}, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
     <link rel="stylesheet" href="/assets/css/burger_style.css" type="text/css" />
+    
     <title>Burger Eater</title>
 </head>
 <body>
     {{{ body }}}
+
+    <form class="form-inline">
+    <div class="form-group mx-sm-3 mb-2">
+    <input type="text" class="form-control" id="inputBurger" placeholder="New Burger">
+    </div>
+    <a href='/' type="submit" class="btn btn-primary mb-2">Submit Burger</a>
+    </form>
 </body>
 </html>
