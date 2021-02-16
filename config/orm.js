@@ -4,10 +4,13 @@ const tableName = "burgers";
 
 const orm = {
     selectAll: function(callback) {
-        const queryText = `SELECT * FROM ${tableName}`;
 
-        connection.query(queryText, function(err, result) {
-            callback(result);
+        const queryText = `SELECT * FROM ${tableName};`;
+
+        connection.query(queryText, function(err, results) {
+          
+          console.log(results)
+            callback(results);
     });
   },
 
