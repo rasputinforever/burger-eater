@@ -15,9 +15,13 @@ router.get("/", function(req, res) {
 
 router.post("/api/burgers/", function(req, res) {
   console.log(req.body)
-  console.log("hello from POSt")
-});
+  console.log("hello from POST")
+  burger.insertOne(req.body.name, function(result) {
+    // not sure what this callback is for but it SEEMS TO WORK
+    res.end();
+  })
+})
 
-// will add the others after determining that this one works
+// now just need update
 
 module.exports = router;

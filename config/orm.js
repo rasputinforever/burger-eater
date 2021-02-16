@@ -14,12 +14,13 @@ const orm = {
   },
 
     insertOne: function(burgName, callback) {
-        const queryText = `INSERT INTO ${tableName} (burger_name, devoured)
-        VALUES (??, FALSE);`;
-
+        const queryText = `INSERT INTO burgers (burger_name, devoured)
+        VALUES (?, FALSE);`;
+        console.log("Hello from ORM")
         connection.query(queryText, [burgName], function(err, result) {
+            console.log(queryText)
             callback(result);
-    });
+         });
   },
 
     updateOne: function(devBool, burgName, callback) {

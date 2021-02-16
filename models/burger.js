@@ -8,6 +8,7 @@ const burger = {
   },
 
   insertOne: function(burgName, callback) {
+    console.log("Hello from MODEL")
     orm.insertOne(burgName, function(res) {
       callback(res);
     });
