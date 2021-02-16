@@ -9,7 +9,6 @@ const orm = {
 
         connection.query(queryText, function(err, results) {
           
-          console.log(results)
             callback(results);
     });
   },

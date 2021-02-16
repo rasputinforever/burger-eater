@@ -6,15 +6,16 @@ const router = express.Router();
 
 router.get("/", function(req, res) {
   burger.selectAll(function(data) {
-    console.log("Hello from Get")
-      console.log(data)
     const burgerObj = {
       burger: data
     };
-    console.log(data)
-    console.log(burgerObj)
     res.render("index", burgerObj);
   });
+});
+
+router.post("/api/burgers/", function(req, res) {
+  console.log(req.body)
+  console.log("hello from POSt")
 });
 
 // will add the others after determining that this one works
