@@ -1,10 +1,9 @@
 <p>Burger Eater!</p>
 
-
 <p>Burgers waiting to be devoured:</p>
     {{#each burger}}
         {{#unless devoured}}
-            <ul>{{this.burger_name}}</ul>
+            <ul>{{this.burger_name}}</ul><button id="{{this.id}}">Devour It!</button>
         {{/unless}}
     {{/each}}
 

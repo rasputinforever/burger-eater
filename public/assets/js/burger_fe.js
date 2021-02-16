@@ -1,11 +1,8 @@
-$("#x").on("click", function(event) {
-    alert("Hello from click!")
-    
-});
+// couldn't get away from using a public JS. Also, JQUERY's AJAX makes this routing easier.
 
 // this ensures the doc is fully loaded
 $(document).ready(function(){
-    // actual on-click here
+    // actual on-click here for POST
     $("#submitBtn").click(function(event) {
         console.log("Hello from Click!");
         // necessary for wonky reasons
@@ -26,7 +23,5 @@ $(document).ready(function(){
         );
     });
 
+    // update buttons here, by class, but references ID of clicked button/nearby thing
 });
-
-
-console.log("Hello from public js")
