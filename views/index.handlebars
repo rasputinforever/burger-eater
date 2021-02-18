@@ -3,7 +3,7 @@
 <p>Burgers waiting to be devoured:</p>
     {{#each burger}}
         {{#unless devoured}}
-            <ul>{{this.burger_name}}</ul><button id="{{this.id}}">Devour It!</button>
+            <ul>{{this.burger_name}}</ul><button id="{{this.id}}" class="devBtn">Devour It!</button>
         {{/unless}}
     {{/each}}
 

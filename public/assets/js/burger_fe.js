@@ -24,4 +24,9 @@ $(document).ready(function(){
     });
 
     // update buttons here, by class, but references ID of clicked button/nearby thing
+    $(".devBtn").click(function(event) {
+        console.log(this.id)
+    
+    
+    })
 });
