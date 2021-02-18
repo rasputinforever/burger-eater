@@ -1,15 +1,21 @@
-<p>Burger Eater!</p>
+<section class="row">
+    <aside class="col-sm burgerAside">
+        <h2>Burgers waiting to be devoured:</h2>
+        {{#each burger}}
+            {{#unless devoured}}
+                <div>
+                    <ul class="openBurg">{{this.burger_name}}</ul><button id="{{this.id}}" class="devBtn">Devour It!</button>
+                </div>
+            {{/unless}}
+        {{/each}}
+    </aside>
 
-<p>Burgers waiting to be devoured:</p>
-    {{#each burger}}
-        {{#unless devoured}}
-            <ul>{{this.burger_name}}</ul><button id="{{this.id}}" class="devBtn">Devour It!</button>
-        {{/unless}}
-    {{/each}}
-
-<p>Devoured Burgers</p>
-    {{#each burger}}
-        {{#if devoured}}
-            <ul>{{this.burger_name}}</ul>
-        {{/if}}
-    {{/each}}
+    <aside class="col-sm devouredAside">
+        <h2>Devoured Burgers</h2>
+        {{#each burger}}
+            {{#if devoured}}
+                <ul class="eatenBurg">{{this.burger_name}}</ul>
+            {{/if}}
+        {{/each}}
+    </aside>
+</section>
