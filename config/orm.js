@@ -7,6 +7,8 @@ const orm = {
   selectAll: function(callback) {
         const queryText = `SELECT * FROM ${tableName};`;
         connection.query(queryText, function(err, results) {
+          
+            console.log(results)
             callback(results);
     });
   },
@@ -15,17 +17,18 @@ const orm = {
       const queryText = `INSERT INTO ${tableName} (burger_name, devoured)
       VALUES (?, FALSE);`;
       connection.query(queryText, [burgName], function(err, result) {
+        console.log(queryText)
           callback(result);
         });
   },
 
   // UNTESTED: will be used to update a single burger... will need the ID of the burger for best results
-    updateOne: function(devBool, burgID, callback) {
+    updateOne: function(burgID, callback) {
         const queryText = `UPDATE ${tableName}
-        SET devoured = ??
-        WHERE id = ??;`;
+        SET devoured = 1
+        WHERE id = ?;`;
 
-        connection.query(queryText, [devBool, burgID], function(err, result) {
+        connection.query(queryText, [burgID], function(err, result) {
             callback(result);
     });
   }

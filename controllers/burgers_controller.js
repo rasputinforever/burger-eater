@@ -24,7 +24,16 @@ router.post("/api/burgers/", function(req, res) {
   })
 })
 
-// now just need update...
-  // get id. HANDLEBAR needs to use the ID somehow as reference for UPDATE
+router.put("/api/burgers/:id", function(req, res) {
+ 
+  const burgID = req.params.id;
+  console.log("Hello from PUT with id", burgID)
+  burger.updateOne(burgID, function() {
+      res.end();
+    
+  });
+
+})
 
 module.exports = router;
+

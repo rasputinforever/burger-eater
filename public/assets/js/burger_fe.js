@@ -27,6 +27,13 @@ $(document).ready(function(){
     $(".devBtn").click(function(event) {
         console.log(this.id)
     
-    
+        $.ajax(`/api/burgers/${this.id}`, {
+            type: "PUT",
+            data: this.id
+            }).then(
+                function() {
+                    console.log("devoured burger");
+                }
+            );
     })
 });
