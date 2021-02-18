@@ -27,7 +27,7 @@ $(document).ready(function(){
     // update buttons here, by class, but references ID of clicked button/nearby thing
     $(".devBtn").click(function(event) {
         console.log(this.id)
-    
+        // only need to send ID, which is stored in button ID
         $.ajax(`/api/burgers/${this.id}`, {
             type: "PUT",
             data: this.id

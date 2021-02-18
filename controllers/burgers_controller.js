@@ -16,23 +16,17 @@ router.get("/", function(req, res) {
 
 // for adding a new burger
 router.post("/api/burgers/", function(req, res) {
-  console.log(req.body)
-  console.log("hello from POST")
-  burger.insertOne(req.body.name, function(result) {
-    // not sure what this callback is for but it SEEMS TO WORK
+  burger.insertOne(req.body.name, function() {
     res.end();
   })
 })
 
+// for 'devouring' a burger
 router.put("/api/burgers/:id", function(req, res) {
- 
   const burgID = req.params.id;
-  console.log("Hello from PUT with id", burgID)
   burger.updateOne(burgID, function() {
-      res.end();
-    
+      res.end();  
   });
-
 })
 
 module.exports = router;
