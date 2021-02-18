@@ -19,6 +19,7 @@ $(document).ready(function(){
         }).then(
             function() {
                 console.log("created new burger");
+                location.reload();
             }
         );
     });
@@ -33,6 +34,7 @@ $(document).ready(function(){
             }).then(
                 function() {
                     console.log("devoured burger");
+                    location.reload();
                 }
             );
     })
