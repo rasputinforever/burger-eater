@@ -1,0 +1,20 @@
+body
+{
+    text-align: center;
+    background-color: orange;
+    color: white;
+    
+}
+
+
+img {
+    width: 200px;
+}
+
+ul {
+    font-size: 24px;
+}
+
+.burgerAside {
+    color: rebeccapurple;
+}

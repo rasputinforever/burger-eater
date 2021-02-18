@@ -1,22 +1,32 @@
 <section class="row">
-    <aside class="col-sm burgerAside">
-        <h2>Burgers waiting to be devoured:</h2>
+    <aside class="col-6 burgerAside">
+        <h3>Burgers waiting to be devoured:</h3>
         {{#each burger}}
             {{#unless devoured}}
                 <div class="row">
-                    <div class="col-sm">
+                    <div class="col-6">
                         <ul class="openBurg">{{this.burger_name}}</ul>
                     </div>
-                    <div class="col-sm">
+                    <div class="col-6">
                         <button id="{{this.id}}" class="devBtn">Devour It!</button>
                     </div>
                 </div>
             {{/unless}}
         {{/each}}
+           
+    <footer class="row">
+        <form class="form-inline">
+            <div class="form-group mx-sm-3 mb-2">
+            <input type="text" class="form-control" id="inputBurger" placeholder="New Burger">
+            </div>
+            <button id="submitBtn" class="btn btn-primary mb-2">Submit Burger</button>
+        </form>
+    </footer>
+    
     </aside>
 
-    <aside class="col-sm devouredAside">
-        <h2>Devoured Burgers</h2>
+    <aside class="col-6 devouredAside">
+        <h3>Devoured Burgers</h3>
         {{#each burger}}
             {{#if devoured}}
                 <ul class="eatenBurg">{{this.burger_name}}</ul>
