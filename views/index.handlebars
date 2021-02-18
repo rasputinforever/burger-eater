@@ -3,8 +3,13 @@
         <h2>Burgers waiting to be devoured:</h2>
         {{#each burger}}
             {{#unless devoured}}
-                <div>
-                    <ul class="openBurg">{{this.burger_name}}</ul><button id="{{this.id}}" class="devBtn">Devour It!</button>
+                <div class="row">
+                    <div class="col-sm">
+                        <ul class="openBurg">{{this.burger_name}}</ul>
+                    </div>
+                    <div class="col-sm">
+                        <button id="{{this.id}}" class="devBtn">Devour It!</button>
+                    </div>
                 </div>
             {{/unless}}
         {{/each}}
