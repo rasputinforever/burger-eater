@@ -15,8 +15,8 @@ const orm = {
   // used when adding a burger to the DB, it's always FALSE for devoured
   insertOne: function(burgName, callback) {
       const queryText = `INSERT INTO ${tableName} (burger_name, devoured)
-      VALUES (?, FALSE);`;
-      connection.query(queryText, [burgName], function(err, result) {
+      VALUES (${burgName}, FALSE);`;
+      connection.query(queryText, function(err, result) {
         console.log(queryText)
           callback(result);
         });
@@ -26,9 +26,9 @@ const orm = {
     updateOne: function(burgID, callback) {
         const queryText = `UPDATE ${tableName}
         SET devoured = 1
-        WHERE id = ?;`;
+        WHERE id = ${burgID};`;
 
-        connection.query(queryText, [burgID], function(err, result) {
+        connection.query(queryText, function(err, result) {
             callback(result);
     });
   }
