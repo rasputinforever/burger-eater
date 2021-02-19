@@ -23,10 +23,10 @@ To use this app effectively please perform the following:
 
 ## How it Works
 
-### ![Node.js](https://nodejs.org/en/), ![Express](https://expressjs.com/), & ![MySQL](https://www.mysql.com/)
+### [Node.js](https://nodejs.org/en/), [Express](https://expressjs.com/), & [MySQL](https://www.mysql.com/)
 The functionality provided by the application is founded on Node.js npm Express and MySQL database. Using these two tools it is possible to host and serve an application which stores and reads data from a dedicated MySQL database!
 
-### ![express-handlebars](https://www.npmjs.com/package/express-handlebars)
+### [express-handlebars](https://www.npmjs.com/package/express-handlebars)
 This npm allows for the transformation of strings, arrays, and objects into serve-able HTML. For burgers, as an example, it is possible to pass the SELECT * FROM burgers results array to the index.handlebars file which has it's own scheme for digesting that item. Functions like {{#each}} and conditionals like {{#unless}} allow for recursive and "smart" building of HTML in the exact format in which the HTML will exist. Then, that built-up body is passed into the main.handlebars file and served to the user.
 
 ### ORM
@@ -36,9 +36,9 @@ ORMs can then be passed into a model, router, etc..
 
 ### Pathway
 
-User Adds Burger: > Public JS makes AJAX POST Call to Server > Server routes to INSERT ORM > ORM sends INSERT to MySQL
+**User Adds Burger**: > Public JS makes AJAX POST Call to Server > Server routes to INSERT ORM > ORM sends INSERT to MySQL
 
-User Devours Burger: > Public JS makes AJAX PUT Call to Server > Server routes to UPDATE ORM > ORM sends UPDATE to MySQL
+**User Devours Burger**: > Public JS makes AJAX PUT Call to Server > Server routes to UPDATE ORM > ORM sends UPDATE to MySQL
 
 ## Credits
 
