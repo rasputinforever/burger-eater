@@ -15,7 +15,7 @@ const orm = {
   // used when adding a burger to the DB, it's always FALSE for devoured
   insertOne: function(burgName, callback) {
       const queryText = `INSERT INTO ${tableName} (burger_name, devoured)
-      VALUES (${burgName}, FALSE);`;
+      VALUES ('${burgName}', FALSE);`;
       connection.query(queryText, function(err, result) {
         console.log(queryText)
           callback(result);
